@@ -1,0 +1,21 @@
+.filter {
+  padding-top: 100px;
+
+  .filter-sort {
+    display: inline-block;
+    margin: 21px 0 0 20px;
+    color: $clr2
+  }
+
+  .filter-sort:hover {
+    color: $clrb;
+  }
+
+  span{
+    cursor: pointer;
+  }
+
+  span:hover{
+    color: $clr3;
+  }
+}

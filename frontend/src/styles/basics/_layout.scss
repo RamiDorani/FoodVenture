@@ -1,0 +1,66 @@
+.main-container {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+
+  >* {
+    grid-column: 2;
+
+    &.full {
+      grid-column: 1 /-1;
+    }
+  }
+
+  @include for-narrow-layout {
+    grid-template-columns:
+      minmax(20px, 1fr) minmax(auto, $mobile-breakpoint) minmax(20px, 1fr);
+  }
+
+  @include for-normal-layout {
+    grid-template-columns:
+      minmax(20px, 1fr) minmax(auto, $narrow-breakpoint) minmax(20px, 1fr);
+  }
+
+  @include for-wide-layout {
+    grid-template-columns:
+      minmax(20px, 1fr) minmax(auto, $normal-breakpoint) minmax(20px, 1fr);
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.location-card, .cuisine-card {
+  position: relative;
+  text-align: center;
+  color: $clrw;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.04);
+    transition: transform 0.5s;
+  }
+  
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(40px);
+    text-transform: capitalize;
+  }
+}
+
+.location-card h3 {
+  text-shadow: 1px 0px 2px black;
+}
+
+.cuisine-card h3 {
+  text-shadow: 1px 2px 5px black;
+}

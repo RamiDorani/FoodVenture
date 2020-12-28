@@ -1,0 +1,95 @@
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+
+    h3 {
+        padding-bottom: 10px;
+    }
+
+    div {
+        margin: 2px 0;
+        min-width: 300px;
+    }
+
+    button {
+        text-align: center;
+        margin: 10px auto;
+        border: 1px solid $clr2;
+        border-radius: 100px;
+
+        &:hover {
+            color: $clr3;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    }
+
+    .select {
+        position: relative;
+
+        select {
+            max-width: 290px;
+        }
+    }
+}
+
+.modal-wrapper {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    span {
+        color: black;
+    }
+}
+
+.modal-content {
+    background: white;
+    width: 450px;
+    min-height: 500px;
+    position: relative;
+    border-radius: 10px;
+    animation-name: modalopen;
+    animation-duration: 0.8s;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+
+    text-align: center;
+}
+
+.close-modal-btn {
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.close-modal-btn:focus {
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

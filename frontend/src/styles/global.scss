@@ -1,0 +1,31 @@
+// Setup
+@import "setup/variables.scss";
+@import "setup/functions.scss";
+@import "setup/mixins.scss";
+@import "setup/typography.scss";
+
+// Basics
+@import "basics/helpers.scss";
+@import "basics/layout.scss";
+@import "basics/base.scss";
+@import "basics/links.scss";
+@import "basics/buttons.scss";
+
+// Components
+@import "components/nav-bar.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/user-preview.scss";
+@import "components/user-details.scss";
+@import "components/filter.scss";
+@import "components/reservationForm.scss";
+@import "components/main.scss";
+@import "components/reviews.scss";
+@import "components/reservations-list.scss";
+@import "components/clap.scss";
+@import "components/testimonials-one.scss";
+@import "components/testimonials-two.scss";
+@import "components/stars-rating.scss";
+@import "components/sign-up.scss";
+@import "components/chat.scss";
+@import "components/notification-modal.scss";

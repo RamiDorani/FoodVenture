@@ -1,0 +1,52 @@
+.testimonials-two {
+  background-image: url(../../img/testimonials-two.jpg);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.2);
+  }
+
+  & * {
+    z-index: 1;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: $clrw;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    font-size: rem(22px);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+
+    & .one {
+      margin-bottom: 300px;
+    }
+
+    & .three {
+      margin-top: 300px;
+    }
+
+    .stars {
+      font-size: rem(14px);
+      padding-top: 5px;
+    }
+
+    .magazine {
+      font-family: satisfy;
+      text-align: end;
+      padding: 5px 30px 0 0;
+      font-size: rem(20px);
+    }
+  }
+}
